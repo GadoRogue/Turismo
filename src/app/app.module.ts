@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CulturalComponent } from './cultural/cultural.component';
 import { GastronomicoComponent } from './gastronomico/gastronomico.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CulturalComponent,
-    GastronomicoComponent
+    GastronomicoComponent,
+    NosotrosComponent
   ],
   imports: [
     BrowserModule,
