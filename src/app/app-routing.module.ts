@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { InicioComponent } from './inicio/inicio.component';
-import { NosotrosComponent } from './nosotros/nosotros.component';
-import { CulturalComponent } from './cultural/cultural.component';
 import { GastronomicoComponent } from './gastronomico/gastronomico.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
 import { EncabezadoComponent } from './encabezado/encabezado.component';
@@ -13,10 +11,6 @@ const Routes: Routes = [
     component: InicioComponent,
   },
   {
-    path: 'cultural',
-    component: CulturalComponent,
-  },
-  {
     path: 'contactanos',
     component: ContactanosComponent,
   },
@@ -25,13 +19,10 @@ const Routes: Routes = [
     component: GastronomicoComponent,
   },
   {
-    path: 'nosotros',
-    component: NosotrosComponent,
-  },
-  {
     path: 'encabezado',
     component: EncabezadoComponent,
-  },  {
+  }, 
+  {
     path: 'piepagina',
     component: PiepaginaComponent,
   },
