@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CulturalComponent } from './cultural/cultural.component';
+import { GastronomicoComponent } from './gastronomico/gastronomico.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CulturalComponent,
+    GastronomicoComponent
   ],
   imports: [
     BrowserModule,
