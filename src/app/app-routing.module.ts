@@ -7,6 +7,10 @@ import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { PiepaginaComponent } from './piepagina/piepagina.component';
 const Routes: Routes = [
   {
+    path: '',
+    component: InicioComponent,
+  },
+  {
     path: 'inicio',
     component: InicioComponent,
   },
@@ -26,6 +30,7 @@ const Routes: Routes = [
     path: 'piepagina',
     component: PiepaginaComponent,
   },
+  
 ];
 @NgModule({
   imports: [RouterModule.forRoot(Routes)],

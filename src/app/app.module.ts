@@ -8,6 +8,7 @@ import { GastronomicoComponent } from './gastronomico/gastronomico.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
 import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { PiepaginaComponent } from './piepagina/piepagina.component';
+import { ListaComponent } from './lista/lista.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PiepaginaComponent } from './piepagina/piepagina.component';
     ContactanosComponent,
     EncabezadoComponent,
     PiepaginaComponent,
+    ListaComponent,
   ],
   imports: [
     BrowserModule,
