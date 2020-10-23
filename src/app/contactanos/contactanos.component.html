@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- ANIMATE CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
@@ -19,31 +22,45 @@
 
         <div class="contact-wrapper animated bounceInUp">
             <div class="contact-form">
-                <form action="">
+                <form class="register__container--form" #Registerform = "ngForm" (ngSubmit)="savecontacto()">
                     <p>
                         <label>PrimerNombre</label>
-                        <input type="text" name="fullname">
+                        <!--Nombre-->
+                        <input class="input" type="text" placeholder="Nombre" name="nombre" [(ngModel)]="contacto.nombre" #nombre="ngModel" required
+                        [class.is-invalid]="nombre.invalid && nombre.touched">
+                        <small class = "text-danger" [class.d-none]="nombre.valid || nombre.untouched">Debe ingresar su nombre</small>
                     </p>
                     <p>
                         <label>Correo electronico</label>
-                        <input type="email" name="email">
+                        <!--Correo-->
+                        <input class="input" type="text" placeholder="Email" name="email" [(ngModel)]="contacto.email" #email="ngModel" required
+                        [class.is-invalid]="email.invalid && email.touched">
+                        <small class = "text-danger" [class.d-none]="email.valid || email.untouched">Debe ingresar su nombre</small>
                     </p>
                     <p>
                         <label>Numero de telefono</label>
-                        <input type="tel" name="phone">
+                        <!--Nombre-->
+                        <input class="input" type="number" placeholder="Telefono" name="telefono" [(ngModel)]="contacto.telefono" #telefono="ngModel" required
+                        [class.is-invalid]="telefono.invalid && telefono.touched">
+                        <small class = "text-danger" [class.d-none]="telefono.valid || telefono.untouched">Debe ingresar su nombre</small>
                     </p>
                     <p>
                         <label>Asunto</label>
-                        <input type="text" name="affair">
+                        <!--Nombre-->
+                        <input class="input" type="text" placeholder="Asunto" name="asunto" [(ngModel)]="contacto.asunto" #asunto="ngModel" required
+                        [class.is-invalid]="asunto.invalid && asunto.touched">
+                        <small class = "text-danger" [class.d-none]="asunto.valid || asunto.untouched">Debe ingresar su nombre</small>
                     </p>
                     <p class="block">
                        <label>Mensaje</label> 
-                        <textarea name="message" rows="3"></textarea>
+                        <!--Nombre-->
+                        <textarea class="input" type="text" placeholder="Mensaje" name="mensaje" [(ngModel)]="contacto.mensaje" #mensaje="ngModel" required
+                        [class.is-invalid]="mensaje.invalid && mensaje.touched" rows="3"></textarea>
+                        <small class = "text-danger" [class.d-none]="mensaje.valid || mensaje.untouched">Debe ingresar su nombre</small>
                     </p>
                     <p class="block">
-                        <button>
-                            Enviar
-                        </button>
+
+                        <button (click)="send()" class="button">Enviar</button>
                     </p>
                 </form>
             </div>

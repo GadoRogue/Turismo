@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-RouterModule
+import { Router } from '@angular/router';
+import { ServicioService } from '../servicio.service';
+import { Contacto } from '../contacto';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contactanos',
@@ -9,9 +12,43 @@ RouterModule
 })
 export class ContactanosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:ServicioService, private router: Router) { }
+
+  contacto = new Contacto();
+    msg = '';
 
   ngOnInit(): void {
+  }
+
+  savecontacto(){
+    this.contacto = this.contacto;
+  }
+
+  send(){
+    this.service.SendContactoPost(this.contacto).subscribe(
+      data => {
+        this.msg = data;
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Tus datos han sido enviados',
+          showConfirmButton: false,
+          timer: 1500
+        })
+        this.router.navigate(['/inicio'])
+      },
+      error =>{
+        console.log("exception ocurred ",error.error);
+        this.msg = error.error;
+          Swal.fire({
+          position: 'top-end',
+          icon: 'error',
+          title: 'Por favor envianos de nuevo tus datos',
+          showConfirmButton: false,
+          timer: 1500
+        })
+        }
+    )
   }
 
 }
