@@ -1,22 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 import { Lugar } from './lugar';
+import { Place } from './place';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class ServicioService {
 
   constructor(private _http: HttpClient) { }
 
-  url="http://localhost:8080/lista";
+  urllista="http://localhost:8080/lista";
+  urldetalle="http://localhost:8080/detalle";
 
-  public listalugares(Lugar: (Lugar)): Observable<any> {
-    return this._http.post<any>("http://localhost:8080/lista", Lugar);
+
+  ListalugaresGet(tipo){
+    return this._http.get<Lugar[]>(this.urllista+"/tipo/"+tipo);
   }
 
-  ListalugaresGet(){
-    return this._http.get<any>(this.url);
+  LugarGet(id){
+    return this._http.get<Place>(this.urldetalle+"/"+id);
   }
 }

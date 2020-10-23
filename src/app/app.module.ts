@@ -9,6 +9,8 @@ import { ContactanosComponent } from './contactanos/contactanos.component';
 import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { PiepaginaComponent } from './piepagina/piepagina.component';
 import { ListaComponent } from './lista/lista.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DetalleComponent } from './detalle/detalle.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +21,13 @@ import { ListaComponent } from './lista/lista.component';
     EncabezadoComponent,
     PiepaginaComponent,
     ListaComponent,
+    DetalleComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,16 +8,14 @@
 <body>
    <section class="main">
       <h2 class="main__title">Lista de lugares</h2>
-      <input type="text" class="input" name="filterPost" placeholder="Buscar paciente">
    </section>
 
    <div class="table__list" >
-      <button  type="submit" class="button" [routerLink]="['/lugar']">Descargar</button>
             <table id="myTable" class="table table-striped">
                 <thead>
                    <tr>
                       <th scope="col">idLugar</th>
-                      <th scope="col">AidTipoTurismo</th>
+                      <th scope="col">idTipoTurismo</th>
                       <th scope="col">nombre</th>
                       <th scope="col">descripcion</th>
                       <th scope="col">ubicacion</th>
@@ -26,7 +24,7 @@
                       <th scope="col">numero</th>
                    </tr>
                 </thead>
-                <tbody *ngFor="let p of lugar">
+                <tbody *ngFor="let p of lugares">
                        <td>{{p.idLugar}}</td>
                        <td>{{p.idTipoTurismo}}</td>
                        <td>{{p.nombre}}</td>
@@ -35,6 +33,7 @@
                        <td>{{p.latitud}}</td>
                        <td>{{p.longitud}}</td>
                        <td>{{p.numero}}</td>
+                       <button class="btn btn-primary" (click)="detalle(p.idLugar)">Detalle</button>
                 </tbody>
              </table>
        

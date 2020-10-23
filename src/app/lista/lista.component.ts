@@ -10,16 +10,21 @@ import { Lugar } from '../lugar';
   styleUrls: ['./lista.component.css']
 })
 export class ListaComponent implements OnInit {
-  
-  lugar: Lugar[];
+  lugares: Lugar[];
 
   constructor(private service:ServicioService, private router: Router) { }
 
   ngOnInit(): void {
-  }
-  Lista(){
-    this.service.ListalugaresGet().subscribe( //la lista de modelo 
-      data => this.lugar=data);
+    this.service.ListalugaresGet(localStorage.getItem("tipo")).subscribe( //la lista de modelo 
+      data => {
+        this.lugares=data
+      });
   }
 
+
+  detalle(id){
+    localStorage.setItem("id",id);
+    this.router.navigate(['/detalle']);
+  }
+  
 }

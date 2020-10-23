@@ -5,6 +5,8 @@ import { GastronomicoComponent } from './gastronomico/gastronomico.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
 import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { PiepaginaComponent } from './piepagina/piepagina.component';
+import { ListaComponent } from './lista/lista.component';
+import { DetalleComponent } from './detalle/detalle.component';
 const Routes: Routes = [
   {
     path: '',
@@ -29,6 +31,14 @@ const Routes: Routes = [
   {
     path: 'piepagina',
     component: PiepaginaComponent,
+  },
+  {
+    path: 'lista',
+    component: ListaComponent,
+  },
+  {
+    path: 'detalle',
+    component: DetalleComponent,
   },
   
 ];

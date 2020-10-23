@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Turismo"
+    }
+  },
+  "defaultProject": "Turismo",
+  "cli": {
+    "analytics": false
+  }
 }
