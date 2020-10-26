@@ -18,5 +18,32 @@
    <br> {{place.longitud}}
    <br> {{place.numero}}
 
+
+   <div>
+      <agm-map 
+         [latitude]="place.latitud" 
+         [longitude]="place.longitud"
+         [zoom]= "zoom">
+         <agm-marker
+            [latitude]="place.latitud" 
+            [longitude]="place.longitud">
+            <agm-info-window>
+               <p> {{ place.nombre }}  </p>
+            </agm-info-window>
+         </agm-marker>
+
+         <agm-marker
+            [latitude]="mylat" 
+            [longitude]="mylng">
+            <agm-info-window>
+               <p> Te encuentras aca </p>
+            </agm-info-window>
+         </agm-marker>
+
+
+       </agm-map>
+       <button class="btn btn-primary" (click)="ruta()">Como llego ahi</button>
+      </div>
+
 </body>
 </html>

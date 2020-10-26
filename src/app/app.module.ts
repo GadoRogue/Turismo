@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +11,9 @@ import { PiepaginaComponent } from './piepagina/piepagina.component';
 import { ListaComponent } from './lista/lista.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetalleComponent } from './detalle/detalle.component';
+import {AgmCoreModule } from '@agm/core';
+import {} from '@angular/google-maps';
+
 
 @NgModule({
   declarations: [
@@ -27,9 +30,13 @@ import { DetalleComponent } from './detalle/detalle.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyADlpigHNo6PDJJ-ny77szkQJ_8zV_N7J4'
+    })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:  [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

@@ -10,7 +10,11 @@ import { Place } from '../place';
 })
 export class DetalleComponent implements OnInit {
   place= new Place;
-
+  mylat: number;
+  mylng: number;
+  zoom: number = 15;
+  mapTyoeId: string = 'hybrid';
+  
   constructor(private service:ServicioService, private router: Router) { }
 
   ngOnInit(): void {
@@ -18,6 +22,15 @@ export class DetalleComponent implements OnInit {
       data => {
         this.place=data
       });
+  }
+
+  ruta(){
+    navigator.geolocation.getCurrentPosition(position =>{
+      this.mylat =position.coords.latitude;
+      this.mylng =position.coords.longitude;
+      this.zoom =12;
+    })
+
   }
 
 }
