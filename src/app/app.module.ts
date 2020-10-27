@@ -12,7 +12,7 @@ import { ListaComponent } from './lista/lista.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetalleComponent } from './detalle/detalle.component';
 import {AgmCoreModule } from '@agm/core';
-import {} from '@angular/google-maps';
+import { AgmDirectionModule } from 'agm-direction';
 
 
 @NgModule({
@@ -33,7 +33,8 @@ import {} from '@angular/google-maps';
     HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: ''
-    })
+    }),
+    AgmDirectionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
