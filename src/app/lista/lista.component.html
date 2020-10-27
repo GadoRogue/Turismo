@@ -3,12 +3,28 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
+   <script src="index.js"></script>
 </head>
 <body>
+   <div class="slider">
+      <ul>
+         <li>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Ciudad_de_La_Paz_de_noche.jpg"  alt="">
+</li>
+         <li>
+<img src="https://boliviaturistica.com/wp-content/uploads/2017/06/Sahuina-Copacabana-Islas-flotantes-La-Paz-Bolivia-Foto-Ramiro-Siles.jpg"  alt="">
+</li>
+         <li>
+<img src="https://www.boliviaentusmanos.com/turismo/imagenes/tiwanaku1.jpg"  alt="">
+</li>
+         <li>
+<img src="https://i1.wp.com/www.la-epoca.com.bo/wp-content/uploads/2018/11/Lago-Titicaca.jpg?fit=1280%2C720&ssl=1" alt="">
+</li>
+      </ul>
+   </div>
    <section class="main">
-      <h1 class="main__title">Lista de lugares</h1>
+      <h1 class="main__title">LISTA DE LUGARES</h1>  
    </section>
-
    <div class="table__list" >
             <table id="myTable" class="table table-striped">
                 <thead>
@@ -21,6 +37,7 @@
                       <th scope="col">latitud</th>
                       <th scope="col">longitud</th>
                       <th scope="col">numero</th>
+                      <th scope="col">Informacion</th>
                    </tr>
                 </thead>
                 <tbody *ngFor="let p of lugares">
@@ -32,12 +49,14 @@
                        <td>{{p.latitud}}</td>
                        <td>{{p.longitud}}</td>
                        <td>{{p.numero}}</td>
-                       <button class="btn btn-primary" (click)="detalle(p.idLugar)">Detalle</button>
+                       <td><button class="btn btn-primary" (click)="detalle(p.idLugar)">Detalle</button></td>
                 </tbody>
              </table>
        
   </div>
 
 </body>
+<tr></tr><tr></tr>
+<tr></tr><tr></tr>
 <app-piepagina></app-piepagina>
 
