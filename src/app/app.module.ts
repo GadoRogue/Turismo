@@ -32,7 +32,7 @@ import {} from '@angular/google-maps';
     AppRoutingModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyADlpigHNo6PDJJ-ny77szkQJ_8zV_N7J4'
+      apiKey: 'AIzaSyCaST-44nA-ompY7ydI9mw5H0316jsipwM'
     })
   ],
   providers: [],
