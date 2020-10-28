@@ -29,27 +29,21 @@
             <table id="myTable" class="table table-striped">
                 <thead>
                    <tr>
-                      <th scope="col">idLugar</th>
-                      <th scope="col">idTipoTurismo</th>
-                      <th scope="col">nombre</th>
-                      <th scope="col">descripcion</th>
-                      <th scope="col">ubicacion</th>
-                      <th scope="col">latitud</th>
-                      <th scope="col">longitud</th>
-                      <th scope="col">numero</th>
-                      <th scope="col">Informacion</th>
+                      <th class="table_text_title" scope="col">Nombre</th>
+                      <th class="table_text_title" scope="col">Descripcion </th>
+                      <th class="table_text_title" scope="col">Ubicacion (Referencia)</th>
+                      <th class="table_text_title" scope="col">Coordenadas: Latitud, Longitud</th>
+                      <th class="table_text_title" scope="col">Numero de Referencia</th>
+                      <th class="table_text_title" scope="col"> </th>
                    </tr>
                 </thead>
                 <tbody *ngFor="let p of lugares">
-                       <td>{{p.idLugar}}</td>
-                       <td>{{p.idTipoTurismo}}</td>
-                       <td>{{p.nombre}}</td>
-                       <td>{{p.descripcion}}</td>
-                       <td>{{p.ubicacion}}</td>
-                       <td>{{p.latitud}}</td>
-                       <td>{{p.longitud}}</td>
-                       <td>{{p.numero}}</td>
-                       <td><button class="btn btn-primary" (click)="detalle(p.idLugar)">Detalle</button></td>
+                       <td class="table_text">{{p.nombre}}</td>
+                       <td class="table_text">{{p.descripcion}}</td>
+                       <td class="table_text">{{p.ubicacion}}</td>
+                       <td class="table_text">{{p.latitud}} , {{p.longitud}}</td>
+                       <td class="table_text">{{p.numero}}</td>
+                       <td><button class="button" (click)="detalle(p.idLugar)">Mas informacion</button></td>
                 </tbody>
              </table>
        

@@ -56,7 +56,50 @@ h1 {
     margin-right: auto;
   }
 
+
+  .button {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    padding: 0px 20px;
+    margin: 10px 0px;
+    outline: none;
+  }
   
+  .table_text {
+    border: 2px solid white;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    padding: 0px 20px;
+    margin: 10px 0px;
+    outline: none;
+  }
+
+  .table_text_title {
+    border: 2px solid white;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    padding: 0px 20px;
+    margin: 10px 0px;
+    outline: none;
+  }
+
   @keyframes cambio {
     0% {margin-left: 0;}
     20% {margin-left: 0;}

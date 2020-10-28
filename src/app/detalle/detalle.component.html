@@ -8,9 +8,16 @@
    <section class="main">
       <h2 class="main__title">{{place.nombre}}</h2>
    </section>
-   <br> {{place.nombre}}
    <br> {{place.descripcion}}
-   <br> {{place.fotos}}
+
+   <section class="carousel">
+      <div class="carousel__container">
+        <div class="carousel-item" *ngFor="let p of place.fotos">
+            <img class = "slider" src={{p}}  alt="">
+         </div>
+      </div>
+   </section>
+   
    <br> {{place.ubicacion}}
    <br> {{place.latitud}}
    <br> {{place.longitud}}
@@ -38,7 +45,7 @@
 
 
        </agm-map>
-       <button class="btn btn-primary" (click)="ruta()">Como llego ahi</button>
+       <button class="button" (click)="ruta()">Como llego ahi</button>
    </div>
 </body>
 <tr></tr><tr></tr>
