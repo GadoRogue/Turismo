@@ -29,12 +29,17 @@ export class ContactanosComponent implements OnInit {
       data => {
         this.msg = data;
         Swal.fire({
-          position: 'top-end',
-          icon: 'success',
           title: 'Tus datos han sido enviados',
-          showConfirmButton: false,
-          timer: 1500
+          width: 600,
+          padding: '3em',
+          background: '#fff url(/images/trees.png)',
+          backdrop: `
+            rgb(0, 128, 0, 0.4)
+            left top
+            no-repeat
+          `
         })
+
         this.router.navigate(['/inicio'])
       },
       error =>{

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServicioService } from '../servicio.service';
 import { Lugar } from '../lugar';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-lista',
@@ -18,7 +19,20 @@ export class ListaComponent implements OnInit {
     this.service.ListalugaresGet(localStorage.getItem("tipo")).subscribe( //la lista de modelo 
       data => {
         this.lugares=data
+        if(this.lugares.length == 0)
+        {
+          Swal.fire({
+            position: 'top',
+            icon: 'warning',
+            title: 'Lo sentimos, aun no tenemos datos sobre este tipo de turismo',
+            showConfirmButton: false,
+            timer: 3000
+          })
+        }
+        console.log(this.lugares);
+
       });
+    
   }
 
 

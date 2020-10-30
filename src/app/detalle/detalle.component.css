@@ -1,5 +1,5 @@
 agm-map {
-    width: 600px;
+    width: 900px;
     height: 600px;
     display:block;
     margin-left: auto;
@@ -21,42 +21,25 @@ agm-map {
   }
   
   .carousel-item:hover ~ .carousel-item {
-    -webkit-transform: translate3d(100px, 0, 0);
-    transform: translate3d(100px, 0, 0);
+    -webkit-transform: translate3d(300px, 0, 0);
+    transform: translate3d(300px, 0, 0);
   }
   
   .carousel-item__img {
-    width: 200px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     -o-object-fit: cover;
        object-fit: cover;
   }
+ 
     
-  .carousel-item__details--img {
-    width: 20px;
-  }
-  
-  .carousel-item:hover .carousel-item__details {
-    opacity: 1;
-  }
-  
-  .carousel-item__details--title {
-    color: white;
-    margin: 5px 0px 0px 0px;
-  }
-  
-  .carousel-item__details--subtitle {
-    color: white;
-    font-size: 8px;
-    margin: 3px 0px;
-  }
-
+ 
   
   .button {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(#134107, #1E9600, #6aad59, 0.3);
     border: 2px solid white;
     border-radius: 25px;
-    color: black;
+    color: #134107;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
@@ -66,4 +49,33 @@ agm-map {
     padding: 0px 20px;
     margin: 10px 0px;
     outline: none;
+  }
+
+  .sub {
+    border: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'Muli', sans-serif;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+    text-align: left;
+
+  }
+  .text {
+    border: none;
+    color: black;
+    font-size: 17px;
+    font-family: 'Muli', sans-serif;
+    letter-spacing: 1px;
+    text-align: left;
+
+  }
+
+  .diviz{
+    width: 900px;
+    float: left;
+  }
+  .divder{
+    width: 900px;
+    float: right;
   }
