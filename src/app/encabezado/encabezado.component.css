@@ -26,6 +26,7 @@ body {
   section{
   width: 100%;
     background:#1E9600;
+    cursor: pointer;
   
   }
   section ul{
@@ -34,6 +35,7 @@ body {
   max-width: 1200px;
   margin:0 auto;
   padding: 0;
+  cursor: pointer;
   }
   section ul li {
   list-style: none;
@@ -42,19 +44,23 @@ body {
   transition: 0.5s;
   box-sizing: border-box;
   border-right: 1px solid rgba(255,255,255,.2);
+  cursor: pointer;
   
   }
   section ul li:hover{
   background: #CAC531;
+  cursor: pointer;
   }
   section ul li:last-child
   {
   border-right: none;	
+  cursor: pointer;
   }
   section ul li a{
   text-decoration: none;
   padding: 0 20px;
   color: #fff;
+  cursor: pointer;
   }
   section ul li ul{
   position: absolute;
@@ -66,14 +72,17 @@ body {
   transition: 0.5s;
   opacity: 0;
   visibility: hidden;
+  cursor: pointer;
   }
   section ul li:hover ul{
   opacity: 1;
   visibility: visible;
+  cursor: pointer;
   }
   section ul li ul li{
   border-right: none;
   border-bottom: 1px solid rgba(255,255,255,.2);
+  cursor: pointer;
   }
   .carousel {
     padding-left: 30px;

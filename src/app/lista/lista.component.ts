@@ -40,5 +40,9 @@ export class ListaComponent implements OnInit {
     localStorage.setItem("id",id);
     this.router.navigate(['/detalle']);
   }
+  enviar(tipo){
+    localStorage.setItem("tipo",tipo);
+    this.router.navigate(['/lista']);
+  }
   
 }

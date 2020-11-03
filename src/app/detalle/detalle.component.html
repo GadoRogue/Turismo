@@ -15,6 +15,7 @@
       </p>
       <p class="text">
          {{place.descripcion}}
+         <br>
       </p>
 
       <div>
@@ -40,6 +41,12 @@
    
           </agm-map>
           <button class="button" (click)="ruta()">Como llego ahi</button>
+          <p class="sub">
+            Ubicacion del lugar (referncias):
+         </p>
+         <p class="text">
+            {{place.ubicacion}}
+         </p>
       </div>
    </div>
    <div class="divder">
@@ -50,17 +57,9 @@
             </div>
          </div>
       </section>
-
-
-      <p class="sub">
-         Ubicacion del lugar (referncias):
-      </p>
-      <p class="text">
-         {{place.ubicacion}}
-      </p>
+      
    </div>
    
 </body>
-<tr></tr><tr></tr>
-<tr></tr><tr></tr>
+
 <app-piepagina></app-piepagina>
