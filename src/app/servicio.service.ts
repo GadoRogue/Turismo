@@ -13,6 +13,7 @@ export class ServicioService {
 
   constructor(private _http: HttpClient) { }
 
+  urlgeneral="http://localhost:8080";
   urllista="http://localhost:8080/lista";
   urldetalle="http://localhost:8080/detalle";
   urlcontactos="http://localhost:8080/contactanos";
@@ -28,5 +29,9 @@ export class ServicioService {
 
   SendContactoPost(contacto: Contacto ){
     return this._http.post<any>(this.urlcontactos+"/guardar", contacto);
+  }
+
+  ListaplacesGet(){
+    return this._http.get<Place[]>(this.urlgeneral+"/places");
   }
 }

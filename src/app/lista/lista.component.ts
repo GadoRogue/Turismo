@@ -1,5 +1,5 @@
 import { Route } from '@angular/compiler/src/core';
-import { Component, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServicioService } from '../servicio.service';
 import { Lugar } from '../lugar';
@@ -10,12 +10,20 @@ import Swal from 'sweetalert2';
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.css']
 })
-export class ListaComponent implements OnInit {
+export class ListaComponent implements OnInit{
   lugares: Lugar[];
 
   constructor(private service:ServicioService, private router: Router) { }
+  
+  static refresh() {
+    window.location.reload();
+  }
 
   ngOnInit(): void {
+   this.lugares_list();
+  }
+
+  lugares_list(){
     this.service.ListalugaresGet(localStorage.getItem("tipo")).subscribe( //la lista de modelo 
       data => {
         this.lugares=data
@@ -35,14 +43,8 @@ export class ListaComponent implements OnInit {
     
   }
 
-
   detalle(id){
     localStorage.setItem("id",id);
     this.router.navigate(['/detalle']);
   }
-  enviar(tipo){
-    localStorage.setItem("tipo",tipo);
-    this.router.navigate(['/lista']);
-  }
-  
 }
