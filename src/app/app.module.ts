@@ -32,7 +32,7 @@ import { AgmDirectionModule } from 'agm-direction';
     AppRoutingModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: ''
+      apiKey: 'AIzaSyDc8swYy45Y-ToVKrGMklbGD2o7av1lXBg'
     }),
     AgmDirectionModule,
   ],

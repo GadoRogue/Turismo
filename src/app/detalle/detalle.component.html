@@ -3,6 +3,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
+   
 </head>
 <body>
    <section class="main">
@@ -18,12 +19,12 @@
          <br>
       </p>
 
-      <div>
+      <div class="divcenter">
          <agm-map 
             [latitude]="place.latitud" 
             [longitude]="place.longitud"
             [zoom]= "zoom">
-   
+
             <agm-marker
                [latitude]="place.latitud" 
                [longitude]="place.longitud">
@@ -37,9 +38,10 @@
             [destination]="destination"
             *ngIf= "look">
             </agm-direction>
-   
-   
+            
           </agm-map>
+
+
           <button class="button" (click)="ruta()">Como llego ahi</button>
           <p class="sub">
             Ubicacion del lugar (referncias):
@@ -49,6 +51,7 @@
          </p>
       </div>
    </div>
+
    <div class="divder">
       <section class="carousel">
          <div class="carousel__container">

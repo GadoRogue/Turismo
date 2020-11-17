@@ -7,7 +7,7 @@
     <div class="carousel__container" >
 
       <div class="carousel-item" *ngFor="let p of places" (click)="place(p.idLugar)">
-        <img class = "carousel-item__img" src={{p.fotos[1]}}  alt=""/>
+        <img class = "carousel-item__img" src={{p.fotos[0]}}  alt=""/>
         <div class="carousel-item__details">
           <p class="carousel-item__details--title">{{p.nombre}}</p>
         </div>

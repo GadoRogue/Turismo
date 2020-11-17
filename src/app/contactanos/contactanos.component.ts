@@ -18,6 +18,16 @@ export class ContactanosComponent implements OnInit {
     msg = '';
 
   ngOnInit(): void {
+
+
+    Swal.fire({
+      title: 'Registra tu lugar a travez de telegram',
+      showCancelButton: true,
+      confirmButtonText: 'Si',
+      showLoaderOnConfirm: true
+    })
+    
+   
   }
 
   savecontacto(){

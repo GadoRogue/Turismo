@@ -20,14 +20,29 @@ export class DetalleComponent implements OnInit {
   origin:any;
   destination:any;
   look: boolean = false;
+  panorama: google.maps.StreetViewPanorama;
+
 
   constructor(private service:ServicioService, private router: Router) { }
 
   ngOnInit(): void {
     this.service.LugarGet(localStorage.getItem("id")).subscribe( //la lista de modelo 
       data => {
-        this.place=data
+        this.place=data;
+        this.initialize();
       });
+  }
+
+
+  initialize() {
+    this.panorama = new google.maps.StreetViewPanorama(
+      document.getElementById("street-view") as HTMLElement,
+      {
+        position: {lat: this.place.latitud , lng: this.place.longitud},
+        pov: { heading: 165, pitch: 0 },
+        zoom: 1,
+      }
+    );
   }
 
   ruta(){
@@ -39,5 +54,6 @@ export class DetalleComponent implements OnInit {
       this.look = true;
     })
   }
+  
 
 }
