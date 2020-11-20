@@ -1,18 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { InicioComponent } from './inicio/inicio.component';
-import { GastronomicoComponent } from './gastronomico/gastronomico.component';
-import { ContactanosComponent } from './contactanos/contactanos.component';
-import { EncabezadoComponent } from './encabezado/encabezado.component';
-import { PiepaginaComponent } from './piepagina/piepagina.component';
-import { ListaComponent } from './lista/lista.component';
-import { HttpClientModule } from '@angular/common/http';
-import { DetalleComponent } from './detalle/detalle.component';
-import {AgmCoreModule } from '@agm/core';
-import { AgmDirectionModule } from 'agm-direction';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {InicioComponent} from './inicio/inicio.component';
+import {GastronomicoComponent} from './gastronomico/gastronomico.component';
+import {ContactanosComponent} from './contactanos/contactanos.component';
+import {EncabezadoComponent} from './encabezado/encabezado.component';
+import {PiepaginaComponent} from './piepagina/piepagina.component';
+import {ListaComponent} from './lista/lista.component';
+import {HttpClientModule} from '@angular/common/http';
+import {DetalleComponent} from './detalle/detalle.component';
+import {AgmCoreModule} from '@agm/core';
+import {AgmDirectionModule} from 'agm-direction';
 
 
 @NgModule({
@@ -38,6 +38,7 @@ import { AgmDirectionModule } from 'agm-direction';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas:  [ CUSTOM_ELEMENTS_SCHEMA ]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {
+}

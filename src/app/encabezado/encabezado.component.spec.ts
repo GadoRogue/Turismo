@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { EncabezadoComponent } from './encabezado.component';
+import {EncabezadoComponent} from './encabezado.component';
 
 describe('EncabezadoComponent', () => {
   let component: EncabezadoComponent;
@@ -8,9 +8,9 @@ describe('EncabezadoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EncabezadoComponent ]
+      declarations: [EncabezadoComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

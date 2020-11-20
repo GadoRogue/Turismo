@@ -1,12 +1,13 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { InicioComponent } from './inicio/inicio.component';
-import { GastronomicoComponent } from './gastronomico/gastronomico.component';
-import { ContactanosComponent } from './contactanos/contactanos.component';
-import { EncabezadoComponent } from './encabezado/encabezado.component';
-import { PiepaginaComponent } from './piepagina/piepagina.component';
-import { ListaComponent } from './lista/lista.component';
-import { DetalleComponent } from './detalle/detalle.component';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+import {InicioComponent} from './inicio/inicio.component';
+import {GastronomicoComponent} from './gastronomico/gastronomico.component';
+import {ContactanosComponent} from './contactanos/contactanos.component';
+import {EncabezadoComponent} from './encabezado/encabezado.component';
+import {PiepaginaComponent} from './piepagina/piepagina.component';
+import {ListaComponent} from './lista/lista.component';
+import {DetalleComponent} from './detalle/detalle.component';
+
 const Routes: Routes = [
   {
     path: '',
@@ -27,7 +28,7 @@ const Routes: Routes = [
   {
     path: 'encabezado',
     component: EncabezadoComponent,
-  }, 
+  },
   {
     path: 'piepagina',
     component: PiepaginaComponent,
@@ -40,10 +41,12 @@ const Routes: Routes = [
     path: 'detalle',
     component: DetalleComponent,
   },
-  
+
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(Routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

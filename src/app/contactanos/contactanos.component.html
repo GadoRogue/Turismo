@@ -1,90 +1,96 @@
 <app-encabezado></app-encabezado>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="contactanos.component.css">
-    <!-- GOOGLE FONTs -->
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!-- ANIMATE CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="contactanos.component.css">
+  <!-- GOOGLE FONTs -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- ANIMATE CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    
-    <div class="content">
 
-        <h1 class="logo">Contac<span>tanos</span></h1>
+<div class="content">
 
-        <div class="contact-wrapper animated bounceInUp">
-            <div class="contact-form">
-                <form class="register__container--form" #Registerform = "ngForm" (ngSubmit)="savecontacto()">
-                    <p>
-                        <label>PrimerNombre</label>
-                        <!--Nombre-->
-                        <input class="input" type="text" placeholder="Nombre" name="nombre" [(ngModel)]="contacto.nombre" #nombre="ngModel" required
-                        [class.is-invalid]="nombre.invalid && nombre.touched">
-                        <small class = "text-danger" [class.d-none]="nombre.valid || nombre.untouched">Debe ingresar su nombre</small>
-                    </p>
-                    <p>
-                        <label>Correo electronico</label>
-                        <!--Correo-->
-                        <input class="input" type="text" placeholder="Email" name="email" [(ngModel)]="contacto.email" #email="ngModel" required
-                        [class.is-invalid]="email.invalid && email.touched">
-                        <small class = "text-danger" [class.d-none]="email.valid || email.untouched">Debe ingresar su nombre</small>
-                    </p>
-                    <p>
-                        <label>Numero de telefono</label>
-                        <!--Nombre-->
-                        <input class="input" type="number" placeholder="Telefono" name="telefono" [(ngModel)]="contacto.telefono" #telefono="ngModel" required
-                        [class.is-invalid]="telefono.invalid && telefono.touched">
-                        <small class = "text-danger" [class.d-none]="telefono.valid || telefono.untouched">Debe ingresar su nombre</small>
-                    </p>
-                    <p>
-                        <label>Asunto</label>
-                        <!--Nombre-->
-                        <input class="input" type="text" placeholder="Asunto" name="asunto" [(ngModel)]="contacto.asunto" #asunto="ngModel" required
-                        [class.is-invalid]="asunto.invalid && asunto.touched">
-                        <small class = "text-danger" [class.d-none]="asunto.valid || asunto.untouched">Debe ingresar su nombre</small>
-                    </p>
-                    <p class="block">
-                       <label>Mensaje</label> 
-                        <!--Nombre-->
-                        <textarea class="input" type="text" placeholder="Mensaje" name="mensaje" [(ngModel)]="contacto.mensaje" #mensaje="ngModel" required
-                        [class.is-invalid]="mensaje.invalid && mensaje.touched" rows="3"></textarea>
-                        <small class = "text-danger" [class.d-none]="mensaje.valid || mensaje.untouched">Debe ingresar su nombre</small>
-                    </p>
-                    <p class="block">
+  <h1 class="logo">Contac<span>tanos</span></h1>
 
-                        <button (click)="send()" class="button">Enviar</button>
-                    </p>
-                </form>
-            </div>
-             <div class="contact-info">
-                <h4>Mas informacion</h4>
-                <ul>
-                      <li><i class="fas fa-map-marker-alt"> </i> TurismoParaCaceritas
-                            <agm-map 
-                            [latitude]="-16.501677 " 
-                            [longitude]="-68.144312"
-                            [zoom]= "17">
-                                <agm-marker
-                                    [latitude]="-16.501677 "
-                                    [longitude]="-68.144312">
-                                </agm-marker>
-                            </agm-map>
-                    </li>
-                    <li><i class="fas fa-phone"></i> (+591) 60523323</li>
-                    <li><i class="fas fa-envelope-open-text"></i> sarmiento.fernanda.jehovana@gmail.com</li>
+  <div class="contact-wrapper animated bounceInUp">
+    <div class="contact-form">
+      <form class="register__container--form" #Registerform="ngForm" (ngSubmit)="savecontacto()">
+        <p>
+          <label>PrimerNombre</label>
+          <!--Nombre-->
+          <input class="input" type="text" placeholder="Nombre" name="nombre" [(ngModel)]="contacto.nombre"
+                 #nombre="ngModel" required
+                 [class.is-invalid]="nombre.invalid && nombre.touched">
+          <small class="text-danger" [class.d-none]="nombre.valid || nombre.untouched">Debe ingresar su nombre</small>
+        </p>
+        <p>
+          <label>Correo electronico</label>
+          <!--Correo-->
+          <input class="input" type="text" placeholder="Email" name="email" [(ngModel)]="contacto.email"
+                 #email="ngModel" required
+                 [class.is-invalid]="email.invalid && email.touched">
+          <small class="text-danger" [class.d-none]="email.valid || email.untouched">Debe ingresar su nombre</small>
+        </p>
+        <p>
+          <label>Numero de telefono</label>
+          <!--Nombre-->
+          <input class="input" type="number" placeholder="Telefono" name="telefono" [(ngModel)]="contacto.telefono"
+                 #telefono="ngModel" required
+                 [class.is-invalid]="telefono.invalid && telefono.touched">
+          <small class="text-danger" [class.d-none]="telefono.valid || telefono.untouched">Debe ingresar su
+            nombre</small>
+        </p>
+        <p>
+          <label>Asunto</label>
+          <!--Nombre-->
+          <input class="input" type="text" placeholder="Asunto" name="asunto" [(ngModel)]="contacto.asunto"
+                 #asunto="ngModel" required
+                 [class.is-invalid]="asunto.invalid && asunto.touched">
+          <small class="text-danger" [class.d-none]="asunto.valid || asunto.untouched">Debe ingresar su nombre</small>
+        </p>
+        <p class="block">
+          <label>Mensaje</label>
+          <!--Nombre-->
+          <textarea class="input" type="text" placeholder="Mensaje" name="mensaje" [(ngModel)]="contacto.mensaje"
+                    #mensaje="ngModel" required
+                    [class.is-invalid]="mensaje.invalid && mensaje.touched" rows="3"></textarea>
+          <small class="text-danger" [class.d-none]="mensaje.valid || mensaje.untouched">Debe ingresar su nombre</small>
+        </p>
+        <p class="block">
 
-                </ul>
-            </div>
-        </div>
+          <button (click)="send()" class="button">Enviar</button>
+        </p>
+      </form>
     </div>
+    <div class="contact-info">
+      <h4>Mas informacion</h4>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"> </i> TurismoParaCaceritas
+          <agm-map
+            [latitude]="-16.501677 "
+            [longitude]="-68.144312"
+            [zoom]="17">
+            <agm-marker
+              [latitude]="-16.501677 "
+              [longitude]="-68.144312">
+            </agm-marker>
+          </agm-map>
+        </li>
+        <li><i class="fas fa-phone"></i> (+591) 60523323</li>
+        <li><i class="fas fa-envelope-open-text"></i> sarmiento.fernanda.jehovana@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 </body>
 <app-piepagina></app-piepagina>

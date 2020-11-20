@@ -1,37 +1,39 @@
 <app-encabezado></app-encabezado>
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <script src="index.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="index.js"></script>
 </head>
 <body>
-   <section class="main">
-      <h1 class="main__title">LISTA DE LUGARES</h1>  
-   </section>
-   <div class="table__list" >
-            <table id="myTable" class="table table-striped">
-                <thead>
-                   <tr>
-                      <th class="table_text_title" scope="col">Nombre</th>
-                      <th class="table_text_title" scope="col">Descripcion </th>
-                      <th class="table_text_title" scope="col">Ubicacion (Referencia)</th>
-                      <th class="table_text_title" scope="col">Coordenadas: Latitud, Longitud</th>
-                      <th class="table_text_title" scope="col">Numero de Referencia</th>
-                      <th class="table_text_title" scope="col"> </th>
-                   </tr>
-                </thead>
-                <tbody *ngFor="let p of lugares">
-                       <td class="table_text">{{p.nombre}}</td>
-                       <td class="table_text">{{p.descripcion}}</td>
-                       <td class="table_text">{{p.ubicacion}}</td>
-                       <td class="table_text">{{p.latitud}} , {{p.longitud}}</td>
-                       <td class="table_text">{{p.numero}}</td>
-                       <td><button class="button" (click)="detalle(p.idLugar)">Mas informacion</button></td>
-                </tbody>
-             </table>
-       
-  </div>
+<section class="main">
+  <h1 class="main__title">LISTA DE LUGARES</h1>
+</section>
+<div class="table__list">
+  <table id="myTable" class="table table-striped">
+    <thead>
+    <tr>
+      <th class="table_text_title" scope="col">Nombre</th>
+      <th class="table_text_title" scope="col">Descripcion</th>
+      <th class="table_text_title" scope="col">Ubicacion (Referencia)</th>
+      <th class="table_text_title" scope="col">Coordenadas: Latitud, Longitud</th>
+      <th class="table_text_title" scope="col">Numero de Referencia</th>
+      <th class="table_text_title" scope="col"></th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let p of lugares">
+    <td class="table_text">{{p.nombre}}</td>
+    <td class="table_text">{{p.descripcion}}</td>
+    <td class="table_text">{{p.ubicacion}}</td>
+    <td class="table_text">{{p.latitud}} , {{p.longitud}}</td>
+    <td class="table_text">{{p.numero}}</td>
+    <td>
+      <button class="button" (click)="detalle(p.idLugar)">Mas informacion</button>
+    </td>
+    </tbody>
+  </table>
+
+</div>
 
 </body>
 <br><br><br><br><br><br><br><br><br><br><br>

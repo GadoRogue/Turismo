@@ -1,116 +1,137 @@
-body{
+body {
   background-color: #F5F9F1;
 }
+
 h1 {
-    font-family: "Consolas", monospace;
-    color: white;
-    text-align: center;
-  }
+  font-family: "Consolas", monospace;
+  color: white;
+  text-align: center;
+}
+
 #myTable {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#myTable td, #myTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#myTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#myTable tr:hover {
+  background-color: #ddd;
+}
+
+#myTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.slider {
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+
+  animation: cambio 15s infinite alternate linear;
+}
+
+.slider li {
+  width: 100%;
+  list-style: none;
+}
+
+.slider img {
+  width: 700px;
+  height: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.button {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+  border-radius: 25px;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Muli', sans-serif;
+  height: 50px;
+  letter-spacing: 1px;
+  padding: 0px 20px;
+  margin: 10px 0px;
+  outline: none;
+}
+
+.table_text {
+  border: 2px solid white;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Muli', sans-serif;
+  height: 50px;
+  letter-spacing: 1px;
+  padding: 0px 20px;
+  margin: 10px 0px;
+  outline: none;
+}
+
+.table_text_title {
+  border: 2px solid white;
+  color: black;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Muli', sans-serif;
+  height: 50px;
+  letter-spacing: 1px;
+  padding: 0px 20px;
+  margin: 10px 0px;
+  outline: none;
+}
+
+@keyframes cambio {
+  0% {
+    margin-left: 0;
   }
-  
-  #myTable td, #myTable th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #myTable tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #myTable tr:hover {background-color: #ddd;}
-  
-  #myTable th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
+  20% {
+    margin-left: 0;
   }
 
-  .slider {
-    width: 95%;
-    margin: auto;
-    overflow: hidden;
+  25% {
+    margin-left: -100%;
   }
-  
-  .slider ul {
-    display: flex;
-    padding: 0;
-    width: 400%;
-    
-    animation: cambio 15s infinite alternate linear;
-  }
-  
-  .slider li {
-    width: 100%;
-    list-style: none;
-  }
-  
-  .slider img {
-    width: 700px;
-    height: 400px;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
+  45% {
+    margin-left: -100%;
   }
 
-
-  .button {
-    background-color: rgba(255, 255, 255, 0.3);
-    border: 2px solid white;
-    border-radius: 25px;
-    color: black;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: 'Muli', sans-serif;
-    height: 50px;
-    letter-spacing: 1px;
-    padding: 0px 20px;
-    margin: 10px 0px;
-    outline: none;
+  50% {
+    margin-left: -200%;
   }
-  
-  .table_text {
-    border: 2px solid white;
-    color: black;
-    cursor: pointer;
-    font-size: 16px;
-    font-family: 'Muli', sans-serif;
-    height: 50px;
-    letter-spacing: 1px;
-    padding: 0px 20px;
-    margin: 10px 0px;
-    outline: none;
+  70% {
+    margin-left: -200%;
   }
 
-  .table_text_title {
-    border: 2px solid white;
-    color: black;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Muli', sans-serif;
-    height: 50px;
-    letter-spacing: 1px;
-    padding: 0px 20px;
-    margin: 10px 0px;
-    outline: none;
+  75% {
+    margin-left: -300%;
   }
-
-  @keyframes cambio {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
-    
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-    
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-    
-    75% {margin-left: -300%;}
-    100% {margin-left: -300%;}
+  100% {
+    margin-left: -300%;
   }
-  
+}

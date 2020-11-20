@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { PiepaginaComponent } from './piepagina.component';
+import {PiepaginaComponent} from './piepagina.component';
 
 describe('PiepaginaComponent', () => {
   let component: PiepaginaComponent;
@@ -8,9 +8,9 @@ describe('PiepaginaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PiepaginaComponent ]
+      declarations: [PiepaginaComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

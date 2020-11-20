@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { Router } from '@angular/router';
-import { ServicioService } from '../servicio.service';
-import { Contacto } from '../contacto';
+import {Component, OnInit} from '@angular/core';
+import {RouterModule} from '@angular/router';
+import {Router} from '@angular/router';
+import {ServicioService} from '../servicio.service';
+import {Contacto} from '../contacto';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -12,29 +12,30 @@ import Swal from 'sweetalert2';
 })
 export class ContactanosComponent implements OnInit {
 
-  constructor(private service:ServicioService, private router: Router) { }
-
-  contacto = new Contacto();
-    msg = '';
-
-  ngOnInit(): void {
-
-
-    Swal.fire({
-      title: 'Registra tu lugar a travez de telegram',
-      showCancelButton: true,
-      confirmButtonText: 'Si',
-      showLoaderOnConfirm: true
-    })
-    
-   
+  constructor(private service: ServicioService, private router: Router) {
   }
 
-  savecontacto(){
+  contacto = new Contacto();
+  msg = '';
+
+  ngOnInit(): void {
+ 
+    Swal.fire({
+      title: 'Registra tu lugar a travez de Telegram',
+      showCancelButton: true,
+      confirmButtonText: 'Entrar a Telegram',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href="https://t.me/Turismo_Caseritas_bot";
+      }
+    })
+  }
+
+  savecontacto() {
     this.contacto = this.contacto;
   }
 
-  send(){
+  send() {
     this.service.SendContactoPost(this.contacto).subscribe(
       data => {
         this.msg = data;
@@ -52,17 +53,17 @@ export class ContactanosComponent implements OnInit {
 
         this.router.navigate(['/inicio'])
       },
-      error =>{
-        console.log("exception ocurred ",error.error);
+      error => {
+        console.log("exception ocurred ", error.error);
         this.msg = error.error;
-          Swal.fire({
+        Swal.fire({
           position: 'top-end',
           icon: 'error',
           title: 'Por favor envianos de nuevo tus datos',
           showConfirmButton: false,
           timer: 1500
         })
-        }
+      }
     )
   }
 
